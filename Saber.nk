@@ -11,23 +11,20 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             <split size="1745" stretch="1"/>
             <splitter orientation="1">
                 <split size="813"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <dock id="" activePageId="DAG.2">
                     <page id="DAG.1"/>
                     <page id="DAG.2"/>
-                    <page id="DAG.4"/>
                 </dock>
                 <split size="928"/>
                 <splitter orientation="2">
                     <split size="724"/>
                     <dock id="" activePageId="Viewer.1">
-                        <page id="Viewer.2"/>
                         <page id="Viewer.1"/>
-                        <page id="Viewer.3"/>
                     </dock>
                     <split size="282"/>
                     <splitter orientation="1">
                         <split size="462"/>
-                        <dock id="" activePageId="Curve Editor.1">
+                        <dock id="" activePageId="uk.co.thefoundry.histogram.1">
                             <page id="uk.co.thefoundry.histogram.1"/>
                             <page id="Curve Editor.1"/>
                             <page id="DopeSheet.1"/>
@@ -45,8 +42,8 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 }
 Root {
  inputs 0
- name "//nfa-vfxim-source.ahk.nl/2ejaar_source/1_Students/Max_de_Groot/VC Saber Nuke/Saber.nk"
- frame 1001
+ name C:/Users/Max.deGroot/IdeaProjects/VCSaberNuke/Saber.nk
+ frame 1064
  first_frame 1001
  last_frame 1264
  lock_range true
@@ -77,28 +74,6 @@ BackdropNode {
 }
 BackdropNode {
  inputs 0
- name BackdropNode2
- tile_color 0x476eaaff
- label "Saber base"
- note_font_size 42
- xpos -929
- ypos -462
- bdwidth 285
- bdheight 261
-}
-BackdropNode {
- inputs 0
- name BackdropNode3
- tile_color 0x476eaaff
- label "Saber base"
- note_font_size 42
- xpos -573
- ypos -461
- bdwidth 285
- bdheight 261
-}
-BackdropNode {
- inputs 0
  name BackdropNode4
  tile_color 0xc6774bff
  label "Noise 1"
@@ -119,35 +94,6 @@ BackdropNode {
  bdwidth 1692
  bdheight 80
 }
-Read {
- inputs 0
- file_type png
- file "/Users/maxdegroot/Creative Cloud Files/Branding/Logo Stroke.png"
- format "984 842 0 0 984 842 1 "
- origset true
- name Read2
- xpos 58
- ypos -650
-}
-Invert {
- channels rgb
- name Invert4
- xpos 58
- ypos -560
-}
-Transform {
- translate {462 79}
- scale 0.55
- center {512 443.5}
- name Transform1
- xpos 58
- ypos -450
-}
-Dot {
- name Dot22
- xpos 92
- ypos -426
-}
 Constant {
  inputs 0
  channels rgb
@@ -161,8 +107,7 @@ Group {
  help "TNT_Line by Michael Habenicht\nwww.tinitron.de\n\nDraw a line from Point 0 to Point 1"
  label TNT_Line
  xpos -50
- ypos -482
- disable true
+ ypos -452
  addUserKnob {20 User}
  addUserKnob {20 info l TNT_Line n 1}
  info 0
@@ -276,12 +221,6 @@ Group {
   ypos 18
  }
 end_group
-Merge2 {
- inputs 2
- name Merge14
- xpos -50
- ypos -429
-}
 Premult {
  name Premult3
  xpos -50
@@ -292,7 +231,7 @@ Dot {
  xpos -16
  ypos -193
 }
-set Ncdba2800 [stack 0]
+set Ne8e6dc00 [stack 0]
 Glow_Exponential {
  name Glow_Exponential1
  xpos 136
@@ -309,13 +248,13 @@ Dot {
  xpos 170
  ypos -121
 }
-push $Ncdba2800
+push $Ne8e6dc00
 Dot {
  name Dot1
  xpos -16
  ypos -175
 }
-set Ncdda1c00 [stack 0]
+set N42264400 [stack 0]
 Glow_Exponential {
  name Glow_Exponential
  xpos 26
@@ -332,7 +271,7 @@ Dot {
  xpos 60
  ypos -145
 }
-push $Ncdda1c00
+push $N42264400
 Merge2 {
  inputs 2
  operation plus
@@ -380,7 +319,7 @@ Saturation {
  xpos -50
  ypos 3
 }
-set Ne76f3800 [stack 0]
+set N5a006000 [stack 0]
 Dot {
  name Dot20
  xpos -126
@@ -391,14 +330,14 @@ Dot {
  xpos -126
  ypos 514
 }
-set Ne76f3000 [stack 0]
+set N5a005800 [stack 0]
 Dot {
  name Dot21
  xpos -126
  ypos 654
 }
-push $Ne76f3000
-push $Ne76f3800
+push $N5a005800
+push $N5a006000
 Saturation {
  saturation 0
  name Saturation1
@@ -428,7 +367,7 @@ Dot {
  xpos 285
  ypos 151
 }
-set Ne76f1c00 [stack 0]
+set N5a004400 [stack 0]
 Grade {
  add 1
  black_clamp false
@@ -453,7 +392,7 @@ Dot {
  xpos 392
  ypos 386
 }
-push $Ne76f1c00
+push $N5a004400
 Clamp {
  name Clamp1
  xpos 60
@@ -464,7 +403,7 @@ Dot {
  xpos 94
  ypos 286
 }
-set Ne76f0400 [stack 0]
+set Na957e800 [stack 0]
 Clamp {
  minimum 1
  maximum 0
@@ -477,7 +416,7 @@ Invert {
  xpos 141
  ypos 311
 }
-push $Ne76f1c00
+push $N5a004400
 Clamp {
  minimum 1
  maximum 5
@@ -521,7 +460,7 @@ Premult {
  xpos 251
  ypos 359
 }
-push $Ne76f0400
+push $Na957e800
 Merge2 {
  inputs 2
  name Merge4
@@ -562,6 +501,11 @@ TurbulentDisplace { name TurbulentDisplace1
  ypos 455
  selected false
  disable false
+
+ xpos 60
+ ypos 455
+ selected false
+ disable false
 }
 Merge2 {
  inputs 2
@@ -577,6 +521,11 @@ TurbulentDisplace { name TurbulentDisplace2
  size 70
  evolution {{frame/11}}
  format 0
+
+ xpos 60
+ ypos 563
+ selected false
+ disable false
 
  xpos 60
  ypos 563
@@ -628,6 +577,11 @@ TurbulentDisplace { name TurbulentDisplace3
  ypos 768
  selected false
  disable false
+
+ xpos 60
+ ypos 768
+ selected false
+ disable false
 }
 ColorCorrect {
  master 0
@@ -649,1229 +603,20 @@ Glow_Exponential {
  intensity 0.45
  range {0.371474791 4 4 4}
 }
-set Ne75eab00 [stack 0]
 CheckerBoard2 {
  inputs 0
  boxsize 12
  centerlinewidth 0
  name CheckerBoard1
- xpos 265
+ xpos -335
  ypos 756
 }
 Merge2 {
  inputs 2
  name Merge3
- xpos 265
+ xpos -335
  ypos 838
 }
-push $Ne75eab00
-Read {
- inputs 0
- file_type png
- file "/Applications/Adobe After Effects 2020/Plug-ins/Optical Flares/Optical Flares Textures/Elements/Iris_Spotty.png"
- format "195 195 0 0 195 195 1 "
- origset true
- name Read4
- xpos -468
- ypos 629
-}
-Read {
- inputs 0
- file_type jpeg
- file /Users/maxdegroot/Downloads/andrey-svistunov-m3Ewywj9zLY-unsplash.jpg
- format "5471 3647 0 0 5471 3647 1 "
- origset true
- name Read3
- xpos -327
- ypos 503
-}
-Reformat {
- name Reformat1
- xpos -327
- ypos 593
-}
-OpticalZDefocus {
- inputs 1+1 inputs 2
- name OpticalZDefocus1
- xpos -327
- ypos 662
- disable true
- channels rgba
- depth_channel depth.Z
- depth_alpha rgba.alpha
- N 9.2
- f 36
- haperture 50
-
- xpos -327
- ypos 662
- selected false
- disable true
-}
-Merge2 {
- inputs 2
- operation plus
- bbox B
- name Merge15
- xpos -327
- ypos 838
-}
-Constant {
- inputs 0
- channels rgb
- format "1280 720 0 0 1280 720 1 HD_720"
- name Constant2
- xpos -920
- ypos -677
-}
-Group {
- name Line2
- help "TNT_Line by Michael Habenicht\nwww.tinitron.de\n\nDraw a line from Point 0 to Point 1"
- label TNT_Line
- xpos -920
- ypos -593
- addUserKnob {20 User}
- addUserKnob {20 info l TNT_Line n 1}
- info 0
- addUserKnob {26 txt l "" +STARTLINE T "by Michael Habenicht\nwww.tinitron.de\n\nDraw a line from Point 0 to Point 1"}
- addUserKnob {20 endGroup n -1}
- addUserKnob {41 output T RotoPaint1.output}
- addUserKnob {41 format T RotoPaint1.format}
- addUserKnob {41 cliptype l "clip to" -STARTLINE T RotoPaint1.cliptype}
- addUserKnob {41 replace -STARTLINE T RotoPaint1.replace}
- addUserKnob {26 divider1 l "" +STARTLINE}
- addUserKnob {12 p0 l "Point 0"}
- p0 {657.4000244 434.3999939}
- addUserKnob {12 p1 l "Point 1"}
- p1 {595.2000122 276.6000061}
- addUserKnob {26 divider2 l Attributes}
- addUserKnob {19 RotoPaint1_color l color}
- RotoPaint1_color 1
- addUserKnob {6 RotoPaint1_color_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
- addUserKnob {8 RotoPaint1_opacity l opacity}
- RotoPaint1_opacity 1
- addUserKnob {8 RotoPaint1_brush_size l "brush size" R 1 1000}
- RotoPaint1_brush_size 4.6
- addUserKnob {8 RotoPaint1_brush_spacing l "brush spacing"}
- RotoPaint1_brush_spacing 0.05000000075
- addUserKnob {8 RotoPaint1_brush_hardness l "brush hardness"}
- RotoPaint1_brush_hardness 1
- addUserKnob {8 RotoPaint1_writeon_start l "write on start"}
- addUserKnob {8 RotoPaint1_writeon_end l "write on end"}
- RotoPaint1_writeon_end 1
-}
- Input {
-  inputs 0
-  name Input1
-  xpos 132
-  ypos -122
- }
- RotoPaint {
-  curves {{{v x3f99999a}
-  {f 0}
-  {n
-   {layer Root
-    {f 2097664}
-    {t x44817000 x443d4000}
-    {a opc
-   {=parent.RotoPaint1_opacity
-    {{0 1 -}}}}
-    {cubiccurve Paint1 512 catmullrom
-     {cc
-      {f 2080}
-      {p
-       {{=parent.p0.x x44410000}
-        {=parent.p0.y x44040000}}
-       {{=parent.p1.x x44a4c666}
-        {=parent.p1.y x446ecccd}}}}
-     {t x44817000 x443d4000}
-     {a r
-      {=parent.RotoPaint1_color.r 1}     g
-      {=parent.RotoPaint1_color.g 1}     b
-      {=parent.RotoPaint1_color.b 1}     a
-      {=parent.RotoPaint1_color.a 1}     ro 0 go 0 bo 0 ao 0 opc
-      {=parent.RotoPaint1_opacity 1}     bs
-      {=parent.RotoPaint1_brush_size x41200000}     bsp
-      {=parent.RotoPaint1_brush_spacing x3d4ccccd}     h
-      {=parent.RotoPaint1_brush_hardness x3e4ccccd}     dt 0 spx x44800000 spy x44428000 sb 1 ws
-      {=parent.RotoPaint1_writeon_start 0}     we
-      {=parent.RotoPaint1_writeon_end 1}     tt x41600000}}}}}}
-  toolbox {selectAll {
-  { selectAll str 1 ssx 1 ssy 1 sf 1 }
-  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { brush dt 0 bu 0 str 1 ssx 1 ssy 1 sf 1 sb 1 ltt 0 tt 14 }
-  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-} }
-  toolbar_show_paint_selection true
-  toolbar_brush_hardness 0.200000003
-  toolbar_source_transform_scale {1 1}
-  toolbar_source_transform_center {320 240}
-  color {{parent.RotoPaint1_color.r 1} {parent.RotoPaint1_color.g} {parent.RotoPaint1_color.b} {parent.RotoPaint1_color.a}}
-  colorOverlay {0 0 0 0}
-  opacity {{parent.RotoPaint1_opacity 1}}
-  lifetime_type "all frames"
-  motionblur_on true
-  brush_size {{parent.RotoPaint1_brush_size 10}}
-  brush_spacing {{parent.RotoPaint1_brush_spacing 0.05000000075}}
-  brush_hardness {{parent.RotoPaint1_brush_hardness 0.200000003}}
-  dynamic_transparency false
-  buildup false
-  writeon_start {{parent.RotoPaint1_writeon_start 0}}
-  writeon_end {{parent.RotoPaint1_writeon_end 1}}
-  source_translate_round false
-  source_black_outside true
-  name RotoPaint1
-  selected true
-  xpos 132
-  ypos -88
- }
- Output {
-  name Output1
-  xpos 132
-  ypos 18
- }
-end_group
-Dot {
- name Dot8
- xpos -885
- ypos -379
-}
-set Ne83a7400 [stack 0]
-Glow_Exponential {
- name Glow_Exponential2
- xpos -733
- ypos -382
- size 300
- intensity 10
- range {0.85 1 1 1}
- core_color 1
- falloff_color 1
- glow_only true
-}
-Dot {
- name Dot10
- xpos -699
- ypos -307
-}
-push $Ne83a7400
-Dot {
- name Dot11
- xpos -885
- ypos -361
-}
-set Ne81b2800 [stack 0]
-Glow_Exponential {
- name Glow_Exponential3
- xpos -843
- ypos -364
- size 60
- intensity 3
- range {0.25 1 1 1}
- core_color 1
- falloff_color 0.5
- glow_only true
-}
-Dot {
- name Dot12
- xpos -809
- ypos -331
-}
-push $Ne81b2800
-Merge2 {
- inputs 2
- operation plus
- bbox B
- name Merge7
- xpos -919
- ypos -334
-}
-Merge2 {
- inputs 2
- operation plus
- bbox B
- name Merge8
- xpos -919
- ypos -310
-}
-ColorCorrect {
- master 0
- midtones.gain {0.9499999881 0.05000000075 0 1}
- highlights 0
- lookup {shadow {curve 1 s0 x0 0 s0}
-   midtone {1-shadow-highlight}
-   highlight {curve x0.4099999964 0 s0 x1 1 s0}}
- name ColorCorrect3
- xpos -919
- ypos -286
-}
-EXPTool {
- mode Stops
- red 1.55
- green 1.55
- blue 1.55
- name Exposure2
- xpos -919
- ypos -262
-}
-Dot {
- name Dot13
- xpos -885
- ypos -226
-}
-Constant {
- inputs 0
- channels rgb
- format "1280 720 0 0 1280 720 1 HD_720"
- name Constant3
- xpos -563
- ypos -694
-}
-Group {
- name Line3
- help "TNT_Line by Michael Habenicht\nwww.tinitron.de\n\nDraw a line from Point 0 to Point 1"
- label TNT_Line
- xpos -563
- ypos -610
- addUserKnob {20 User}
- addUserKnob {20 info l TNT_Line n 1}
- info 0
- addUserKnob {26 txt l "" +STARTLINE T "by Michael Habenicht\nwww.tinitron.de\n\nDraw a line from Point 0 to Point 1"}
- addUserKnob {20 endGroup n -1}
- addUserKnob {41 output T RotoPaint1.output}
- addUserKnob {41 format T RotoPaint1.format}
- addUserKnob {41 cliptype l "clip to" -STARTLINE T RotoPaint1.cliptype}
- addUserKnob {41 replace -STARTLINE T RotoPaint1.replace}
- addUserKnob {26 divider1 l "" +STARTLINE}
- addUserKnob {12 p0 l "Point 0"}
- p0 {575.7000122 521}
- addUserKnob {12 p1 l "Point 1"}
- p1 {456.7999878 446.5}
- addUserKnob {26 divider2 l Attributes}
- addUserKnob {19 RotoPaint1_color l color}
- RotoPaint1_color 1
- addUserKnob {6 RotoPaint1_color_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
- addUserKnob {8 RotoPaint1_opacity l opacity}
- RotoPaint1_opacity 1
- addUserKnob {8 RotoPaint1_brush_size l "brush size" R 1 1000}
- RotoPaint1_brush_size 4.4
- addUserKnob {8 RotoPaint1_brush_spacing l "brush spacing"}
- RotoPaint1_brush_spacing 0.05000000075
- addUserKnob {8 RotoPaint1_brush_hardness l "brush hardness"}
- RotoPaint1_brush_hardness 1
- addUserKnob {8 RotoPaint1_writeon_start l "write on start"}
- addUserKnob {8 RotoPaint1_writeon_end l "write on end"}
- RotoPaint1_writeon_end 1
-}
- Input {
-  inputs 0
-  name Input1
-  xpos 132
-  ypos -122
- }
- RotoPaint {
-  curves {{{v x3f99999a}
-  {f 0}
-  {n
-   {layer Root
-    {f 2097664}
-    {t x44817000 x443d4000}
-    {a opc
-   {=parent.RotoPaint1_opacity
-    {{0 1 -}}}}
-    {cubiccurve Paint1 512 catmullrom
-     {cc
-      {f 2080}
-      {p
-       {{=parent.p0.x x44410000}
-        {=parent.p0.y x44040000}}
-       {{=parent.p1.x x44a4c666}
-        {=parent.p1.y x446ecccd}}}}
-     {t x44817000 x443d4000}
-     {a r
-      {=parent.RotoPaint1_color.r 1}     g
-      {=parent.RotoPaint1_color.g 1}     b
-      {=parent.RotoPaint1_color.b 1}     a
-      {=parent.RotoPaint1_color.a 1}     ro 0 go 0 bo 0 ao 0 opc
-      {=parent.RotoPaint1_opacity 1}     bs
-      {=parent.RotoPaint1_brush_size x41200000}     bsp
-      {=parent.RotoPaint1_brush_spacing x3d4ccccd}     h
-      {=parent.RotoPaint1_brush_hardness x3e4ccccd}     dt 0 spx x44800000 spy x44428000 sb 1 ws
-      {=parent.RotoPaint1_writeon_start 0}     we
-      {=parent.RotoPaint1_writeon_end 1}     tt x41600000}}}}}}
-  toolbox {selectAll {
-  { selectAll str 1 ssx 1 ssy 1 sf 1 }
-  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { brush dt 0 bu 0 str 1 ssx 1 ssy 1 sf 1 sb 1 ltt 0 tt 14 }
-  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-} }
-  toolbar_show_paint_selection true
-  toolbar_brush_hardness 0.200000003
-  toolbar_source_transform_scale {1 1}
-  toolbar_source_transform_center {320 240}
-  color {{parent.RotoPaint1_color.r 1} {parent.RotoPaint1_color.g} {parent.RotoPaint1_color.b} {parent.RotoPaint1_color.a}}
-  colorOverlay {0 0 0 0}
-  opacity {{parent.RotoPaint1_opacity 1}}
-  lifetime_type "all frames"
-  motionblur_on true
-  brush_size {{parent.RotoPaint1_brush_size 10}}
-  brush_spacing {{parent.RotoPaint1_brush_spacing 0.05000000075}}
-  brush_hardness {{parent.RotoPaint1_brush_hardness 0.200000003}}
-  dynamic_transparency false
-  buildup false
-  writeon_start {{parent.RotoPaint1_writeon_start 0}}
-  writeon_end {{parent.RotoPaint1_writeon_end 1}}
-  source_translate_round false
-  source_black_outside true
-  name RotoPaint1
-  selected true
-  xpos 132
-  ypos -88
- }
- Output {
-  name Output1
-  xpos 132
-  ypos 18
- }
-end_group
-Group {
- name Line4
- help "TNT_Line by Michael Habenicht\nwww.tinitron.de\n\nDraw a line from Point 0 to Point 1"
- label TNT_Line
- xpos -563
- ypos -556
- addUserKnob {20 User}
- addUserKnob {20 info l TNT_Line n 1}
- info 0
- addUserKnob {26 txt l "" +STARTLINE T "by Michael Habenicht\nwww.tinitron.de\n\nDraw a line from Point 0 to Point 1"}
- addUserKnob {20 endGroup n -1}
- addUserKnob {41 output T RotoPaint1.output}
- addUserKnob {41 format T RotoPaint1.format}
- addUserKnob {41 cliptype l "clip to" -STARTLINE T RotoPaint1.cliptype}
- addUserKnob {41 replace -STARTLINE T RotoPaint1.replace}
- addUserKnob {26 divider1 l "" +STARTLINE}
- addUserKnob {12 p0 l "Point 0"}
- p0 {380 400.1000061}
- addUserKnob {12 p1 l "Point 1"}
- p1 {248.3999939 308.2000122}
- addUserKnob {26 divider2 l Attributes}
- addUserKnob {19 RotoPaint1_color l color}
- RotoPaint1_color 1
- addUserKnob {6 RotoPaint1_color_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
- addUserKnob {8 RotoPaint1_opacity l opacity}
- RotoPaint1_opacity 1
- addUserKnob {8 RotoPaint1_brush_size l "brush size" R 1 1000}
- RotoPaint1_brush_size 4.4
- addUserKnob {8 RotoPaint1_brush_spacing l "brush spacing"}
- RotoPaint1_brush_spacing 0.05000000075
- addUserKnob {8 RotoPaint1_brush_hardness l "brush hardness"}
- RotoPaint1_brush_hardness 1
- addUserKnob {8 RotoPaint1_writeon_start l "write on start"}
- addUserKnob {8 RotoPaint1_writeon_end l "write on end"}
- RotoPaint1_writeon_end 1
-}
- Input {
-  inputs 0
-  name Input1
-  xpos 132
-  ypos -122
- }
- RotoPaint {
-  curves {{{v x3f99999a}
-  {f 0}
-  {n
-   {layer Root
-    {f 2097664}
-    {t x44817000 x443d4000}
-    {a opc
-   {=parent.RotoPaint1_opacity
-    {{0 1 -}}}}
-    {cubiccurve Paint1 512 catmullrom
-     {cc
-      {f 2080}
-      {p
-       {{=parent.p0.x x44410000}
-        {=parent.p0.y x44040000}}
-       {{=parent.p1.x x44a4c666}
-        {=parent.p1.y x446ecccd}}}}
-     {t x44817000 x443d4000}
-     {a r
-      {=parent.RotoPaint1_color.r 1}     g
-      {=parent.RotoPaint1_color.g 1}     b
-      {=parent.RotoPaint1_color.b 1}     a
-      {=parent.RotoPaint1_color.a 1}     ro 0 go 0 bo 0 ao 0 opc
-      {=parent.RotoPaint1_opacity 1}     bs
-      {=parent.RotoPaint1_brush_size x41200000}     bsp
-      {=parent.RotoPaint1_brush_spacing x3d4ccccd}     h
-      {=parent.RotoPaint1_brush_hardness x3e4ccccd}     dt 0 spx x44800000 spy x44428000 sb 1 ws
-      {=parent.RotoPaint1_writeon_start 0}     we
-      {=parent.RotoPaint1_writeon_end 1}     tt x41600000}}}}}}
-  toolbox {selectAll {
-  { selectAll str 1 ssx 1 ssy 1 sf 1 }
-  { createBezier str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createBezierCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createBSpline str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createEllipse str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangle str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { createRectangleCusped str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { brush dt 0 bu 0 str 1 ssx 1 ssy 1 sf 1 sb 1 ltt 0 tt 14 }
-  { eraser src 2 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { clone src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { reveal src 3 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { dodge src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { burn src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { blur src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { sharpen src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-  { smear src 1 str 1 ssx 1 ssy 1 sf 1 sb 1 }
-} }
-  toolbar_show_paint_selection true
-  toolbar_brush_hardness 0.200000003
-  toolbar_source_transform_scale {1 1}
-  toolbar_source_transform_center {320 240}
-  color {{parent.RotoPaint1_color.r 1} {parent.RotoPaint1_color.g} {parent.RotoPaint1_color.b} {parent.RotoPaint1_color.a}}
-  colorOverlay {0 0 0 0}
-  opacity {{parent.RotoPaint1_opacity 1}}
-  lifetime_type "all frames"
-  motionblur_on true
-  brush_size {{parent.RotoPaint1_brush_size 10}}
-  brush_spacing {{parent.RotoPaint1_brush_spacing 0.05000000075}}
-  brush_hardness {{parent.RotoPaint1_brush_hardness 0.200000003}}
-  dynamic_transparency false
-  buildup false
-  writeon_start {{parent.RotoPaint1_writeon_start 0}}
-  writeon_end {{parent.RotoPaint1_writeon_end 1}}
-  source_translate_round false
-  source_black_outside true
-  name RotoPaint1
-  selected true
-  xpos 132
-  ypos -88
- }
- Output {
-  name Output1
-  xpos 132
-  ypos 18
- }
-end_group
-Dot {
- name Dot14
- xpos -529
- ypos -378
-}
-set Ne7f72800 [stack 0]
-Glow_Exponential {
- name Glow_Exponential4
- xpos -377
- ypos -381
- size 300
- intensity 10
- range {0.85 1 1 1}
- core_color 1
- falloff_color 1
- glow_only true
-}
-Dot {
- name Dot15
- xpos -343
- ypos -306
-}
-push $Ne7f72800
-Dot {
- name Dot16
- xpos -529
- ypos -360
-}
-set Ne7d4dc00 [stack 0]
-Glow_Exponential {
- name Glow_Exponential5
- xpos -487
- ypos -363
- size 60
- intensity 3
- range {0.25 1 1 1}
- core_color 1
- falloff_color 0.5
- glow_only true
-}
-Dot {
- name Dot17
- xpos -453
- ypos -330
-}
-push $Ne7d4dc00
-Merge2 {
- inputs 2
- operation plus
- bbox B
- name Merge10
- xpos -563
- ypos -333
-}
-Merge2 {
- inputs 2
- operation plus
- bbox B
- name Merge11
- xpos -563
- ypos -309
-}
-ColorCorrect {
- master 0
- midtones.gain {0 0.375 1 1}
- highlights 0
- lookup {shadow {curve 1 s0 x0 0 s0}
-   midtone {1-shadow-highlight}
-   highlight {curve x0.4099999964 0 s0 x1 1 s0}}
- name ColorCorrect4
- xpos -563
- ypos -285
-}
-EXPTool {
- mode Stops
- red 1.55
- green 1.55
- blue 1.55
- name Exposure3
- xpos -563
- ypos -261
-}
-Dot {
- name Dot18
- xpos -529
- ypos -225
-}
-Read {
- inputs 0
- file_type jpeg
- file /Users/maxdegroot/Downloads/maxresdefault.jpg
- format "1280 720 0 0 1280 720 1 HD_720"
- origset true
- name Read1
- xpos -755
- ypos -185
-}
-Merge2 {
- inputs 2
- operation plus
- name Merge6
- xpos -755
- ypos -95
-}
-Merge2 {
- inputs 2
- operation plus
- name Merge9
- xpos -755
- ypos -47
-}
-Constant {
- inputs 0
- channels rgb
- format "1920 1080 0 0 1920 1080 1 HD_1080"
- name Constant4
- xpos 951
- ypos -471
-}
-Group {
- name Saber
- tile_color 0x3fffff
- xpos 951
- ypos -306
- addUserKnob {20 Saber}
- addUserKnob {4 Presets M {Default "Arc Reactor" Burning Cellular Core Electric Energize Energy Fire Firestorm Fog Fractal Fuel Fusion Ghost GhostBuster "Green Energy" "Hard Core" Haze Heat Hot Inferno Kryptonite Meteor Myst "Narrow Bright" Narrow Nebular Neon Patronus Portal Protocol Proton Pulse Replicant "Simple Orange" "Soft Smoke" "Solar Wave" Solar StarKiller Tesseract Thin}}
- addUserKnob {6 EnableGlow l "Enable Glow" +STARTLINE}
- EnableGlow true
- addUserKnob {18 GlowColor l "Glow Color"}
- GlowColor {0 0.4979999959 1}
- addUserKnob {6 GlowColor_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
- addUserKnob {7 GlowIntensity l "Glow Intensity" R 0 125}
- GlowIntensity 3
- addUserKnob {7 GlowSpread l "Glow Spread"}
- GlowSpread 20
- addUserKnob {7 GlowBias l "Glow Bias" R 0 2.5}
- GlowBias 0.5
- addUserKnob {26 ""}
- addUserKnob {7 CoreSize l "Core Size" R 0 25}
- CoreSize 3
- addUserKnob {12 CoreStart l "Core Start"}
- CoreStart {{curve x1001 1161 x1007 664} {curve x1001 936 x1007 908}}
- addUserKnob {12 CoreEnd l "Core End"}
- CoreEnd {{curve x1001 960 x1007 866} {curve x1001 162 x1020 136}}
- addUserKnob {26 ""}
- addUserKnob {4 AlphaMode l "Alpha Mode" M {"Enable Masks" "Mask Core" "Mask Glow" Disable ""}}
- AlphaMode Disable
- addUserKnob {20 Flicker}
- addUserKnob {7 FlickerIntensity l Intensity R 0 500}
- addUserKnob {7 FlickerSpeed l Speed R 0 30}
- FlickerSpeed 15
- addUserKnob {6 FlickerMaskRandomization l "Mask Randomization" +STARTLINE}
- addUserKnob {7 FlickerRandomSeed l RandomSeed R 0 100000}
- FlickerRandomSeed 5000
- addUserKnob {20 Distortion}
- addUserKnob {20 GlowDistortion l "Glow Distortion" n 1}
- addUserKnob {7 GlowDistortionAmount l Amount R 0 200}
- addUserKnob {4 GlowDistortionType l Type M {Smoke Fluid Energy}}
- addUserKnob {4 GlowDistortionComposite l Composite M {Distortion Multiply}}
- addUserKnob {6 GlowDistortionInvert l Invert +STARTLINE}
- addUserKnob {7 GlowDistortionWindSpeed l "Wind Speed" R -2 2}
- GlowDistortionWindSpeed 1.5
- addUserKnob {7 GlowDistortionWindDirectionOffset l "Wind Direction Offset" R 0 360}
- addUserKnob {26 GlowDistortionNoise l Noise}
- addUserKnob {7 GlowDistortionNoiseSpeed l Speed}
- GlowDistortionNoiseSpeed 1.5
- addUserKnob {7 GlowDistortionNoiseScale l Scale R 1 1000}
- GlowDistortionNoiseScale 150
- addUserKnob {7 GlowDistortionNoiseBias l Bias R 0.1 3}
- GlowDistortionNoiseBias 1
- addUserKnob {7 GlowDistortionNoiseComplexity l Complexity R 1 10}
- GlowDistortionNoiseComplexity 5
- addUserKnob {7 GlowDistortionNoiseAspectRatio l "Aspect Ratio" R 0 10}
- GlowDistortionNoiseAspectRatio 1
- addUserKnob {26 ""}
- addUserKnob {7 GlowDistortionMotionBlur l "Motion Blur" R 0 10}
- addUserKnob {7 GlowDistortionRandomSeed l "Random Seed" R 0 100000}
- GlowDistortionRandomSeed 5000
- addUserKnob {6 GlowDistortionLockNoiseToSaber l "Lock Noise to Saber" +STARTLINE}
- GlowDistortionLockNoiseToSaber true
- addUserKnob {20 endGroup_1 l endGroup n -1}
- addUserKnob {20 CoreDistortion l "Core Distortion" n 1}
- CoreDistortion 0
- addUserKnob {7 CoreDistortionAmount l Amount R 0 200}
- addUserKnob {4 CoreDistortionType l Type M {Smoke Fluid Energy}}
- addUserKnob {7 CoreDistortionWindSpeed l "Wind Speed" R -2 2}
- addUserKnob {7 CoreDistortionWindDirectionOffset l "Wind Direction Offset" R 0 360}
- addUserKnob {6 CoreDistortionInvert l Invert +STARTLINE}
- addUserKnob {26 CoreDistortionNoise l Noise}
- addUserKnob {7 CoreDistortionNoiseSpeed l Speed}
- CoreDistortionNoiseSpeed 1
- addUserKnob {7 CoreDistortionNoiseScale l Scale R 1 1000}
- CoreDistortionNoiseScale 100
- addUserKnob {7 CoreDistortionNoiseBias l Bias R 0.1 3}
- CoreDistortionNoiseBias 1
- addUserKnob {7 CoreDistortionNoiseComplexity l Complexity R 1 10}
- CoreDistortionNoiseComplexity 3
- addUserKnob {7 CoreDistortionNoiseAspectRatio l "Aspect Ratio" R 0 10}
- CoreDistortionNoiseAspectRatio 1
- addUserKnob {26 ""}
- addUserKnob {7 CoreDistortionMotionBlur l "Motion Blur" R 0 10}
- addUserKnob {7 CoreDistortionRandomSeed l "Random Seed" R 0 100000}
- CoreDistortionRandomSeed 5000
- addUserKnob {6 CoreDistortionLockNoiseToSaber l "Lock Noise to Saber" +STARTLINE}
- CoreDistortionLockNoiseToSaber true
- addUserKnob {6 CoreDistortionBlendOnTop l "Blend on Top" +STARTLINE}
- CoreDistortionBlendOnTop true
- addUserKnob {20 endGroup_2 l endGroup n -1}
- addUserKnob {20 GlowSettings l "Glow Settings"}
- addUserKnob {7 GlowIntensityMultiplier l "Intensity Multiplier" R 0 20}
- GlowIntensityMultiplier 67.64
- addUserKnob {7 GlowSizeMultiplier l "Size Multiplier" R 0 10}
- GlowSizeMultiplier 3.07
- addUserKnob {7 GlowPreGamma l "Pre Gamma" R 0.1 5}
- GlowPreGamma 1
- addUserKnob {26 DIV_Glow1 l "Glow 1"}
- addUserKnob {7 Glow1Intensity l Intensity R 0 10}
- Glow1Intensity 2.13
- addUserKnob {7 Glow1Size l Size R 0 500}
- Glow1Size 60
- addUserKnob {26 DIV_Glow2 l "Glow 2"}
- addUserKnob {7 Glow2Intensity l Intensity R 0 10}
- Glow2Intensity 0.86
- addUserKnob {7 Glow2Size l Size R 0 500}
- Glow2Size 19.9
- addUserKnob {26 DIV_Glow3 l "Glow 3"}
- addUserKnob {7 Glow3Intensity l Intensity R 0 10}
- Glow3Intensity 0.37
- addUserKnob {7 Glow3Size l Size R 0 500}
- Glow3Size 8
- addUserKnob {26 DIV_Glow4 l "Glow 4"}
- addUserKnob {7 Glow4Intensity l Intensity R 0 10}
- Glow4Intensity 0.16
- addUserKnob {7 Glow4Size l Size R 0 500}
- Glow4Size 2.9
- addUserKnob {20 RenderSettings l "Render Settings"}
- addUserKnob {20 MotionBlur l "Motion Blur" n 1}
- addUserKnob {6 MotionBlurEnabled l Enabled +STARTLINE}
- MotionBlurEnabled true
- addUserKnob {7 MotionBlurMultiplier l Multiplier R 0 2}
- MotionBlurMultiplier 1
- addUserKnob {7 MotionBlurPhase l Phase R -360 360}
- addUserKnob {7 MotionBlurClamp l Clamp R 0 20}
- addUserKnob {20 endGroup n -1}
- addUserKnob {26 DIV_MotionBlur l "" +STARTLINE}
- addUserKnob {7 Gamma R 0.1 10}
- Gamma 1
- addUserKnob {7 Brightness R 0 5}
- Brightness 1
- addUserKnob {7 Saturation R 0 2}
- Saturation 1.2
- addUserKnob {7 AlphaBoost l "Alpha Boost"}
- addUserKnob {4 CompositeSettings l "Composite Settings" M {Transparent Black Add}}
- CompositeSettings Black
- addUserKnob {20 Multipliers}
- addUserKnob {7 M_GlowSize}
- M_GlowSize 1
- addUserKnob {7 M_GlowIntensity}
- M_GlowIntensity 0.12
-}
- BackdropNode {
-  inputs 0
-  name BackdropNode2
-  tile_color 0x51a1c6ff
-  label "EXPO GLOW"
-  note_font Verdana
-  note_font_size 72
-  xpos 1084
-  ypos -205
-  bdwidth 2037
-  bdheight 1777
- }
- Rectangle {
-  inputs 0
-  area {0 0 {parent.CoreSize} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
-  name Rectangle1
-  xpos 1458
-  ypos -622
- }
- Transform {
-  translate {{parent.CoreStart.x} {parent.CoreStart.y}}
-  rotate {{"atan2(parent.CoreEnd.y - parent.CoreStart.y, parent.CoreEnd.x - parent.CoreStart.x) * 180 / pi-90"}}
-  center {{parent.CoreSize/2} 0}
-  name Transform1
-  xpos 1458
-  ypos -598
- }
-set N14b4e800 [stack 0]
- Dot {
-  name Dot9
-  xpos 1612
-  ypos -595
- }
- Erode {
-  channels rgb
-  size -1.8
-  name Erode1
-  xpos 1578
-  ypos -545
- }
- TimeBlur {
-  divisions 300
-  shutter 5
-  shutteroffset end
-  shuttercustomoffset 0
-  name TimeBlur1
-  xpos 1578
-  ypos -475
- }
- EXPTool {
-  red 0.55
-  green 0.55
-  blue 0.55
-  name Exposure1
-  xpos 1578
-  ypos -451
- }
- Dot {
-  name Dot10
-  xpos 1612
-  ypos -331
- }
-push $N14b4e800
- Switch {
-  inputs 2
-  which {{parent.MotionBlurEnabled}}
-  name Switch1
-  xpos 1458
-  ypos -334
- }
- Dot {
-  name Dot11
-  xpos 1492
-  ypos -40
- }
-set N8fe0ac00 [stack 0]
- Keyer {
-  operation "luminance key"
-  name Keyer2
-  xpos 1458
-  ypos 98
- }
- Premult {
-  name Premult5
-  xpos 1458
-  ypos 200
- }
- Remove {
-  operation keep
-  channels rgb
-  name Remove1
-  xpos 1458
-  ypos 224
- }
- Grade {
-  white {{Glow1.Colorshift.r} {Glow1.Colorshift.g} {Glow1.Colorshift.b} 1}
-  name Grade7
-  xpos 1458
-  ypos 248
- }
- Multiply {
-  value {{Glow1.Intensity/5}}
-  name Multiply1
-  xpos 1458
-  ypos 314
- }
- Saturation {
-  saturation {{Glow1.Saturation}}
-  name Saturation4
-  xpos 1458
-  ypos 345
- }
- AdjBBox {
-  numpixels {{"Glow1.Overscan ? this.width*0.1:0"} {"Glow1.Overscan ? this.height*0.1: 0"}}
-  name AdjBBox2
-  xpos 1458
-  ypos 385
- }
- Dot {
-  name Dot12
-  xpos 1492
-  ypos 411
- }
-set N8fe08c00 [stack 0]
- Dot {
-  name Dot13
-  xpos 1628
-  ypos 411
- }
-set N8fe08800 [stack 0]
- Dot {
-  name Dot14
-  xpos 1773
-  ypos 411
- }
-set N8fe08400 [stack 0]
- Dot {
-  name Dot15
-  xpos 1918
-  ypos 411
- }
-set N15387c00 [stack 0]
- Dot {
-  name Dot16
-  xpos 2065
-  ypos 411
- }
-set N15387800 [stack 0]
- Dot {
-  name Dot17
-  xpos 2274
-  ypos 411
- }
-set N15387400 [stack 0]
- Dot {
-  name Dot18
-  xpos 2441
-  ypos 411
- }
-set N15387000 [stack 0]
- Dot {
-  name Dot22
-  xpos 2593
-  ypos 411
- }
-set N15386c00 [stack 0]
- Dot {
-  name Dot1
-  xpos 2802
-  ypos 411
- }
-set N15386800 [stack 0]
- Dot {
-  name Dot2
-  xpos 2999
-  ypos 411
- }
- Blur {
-  size {{Blur4.size*2}}
-  name Blur3
-  xpos 2965
-  ypos 499
-  cached true
- }
- Dot {
-  name Dot3
-  xpos 2999
-  ypos 1219
- }
-push $N15386800
- Blur {
-  size {{Blur5.size*2}}
-  name Blur4
-  xpos 2768
-  ypos 499
- }
- Dot {
-  name Dot4
-  xpos 2802
-  ypos 1154
- }
-push $N15386c00
- Blur {
-  size {{Blur6.size*2}}
-  name Blur5
-  xpos 2559
-  ypos 499
- }
- Dot {
-  name Dot28
-  xpos 2593
-  ypos 1070
- }
-push $N15387000
- Blur {
-  size {{Blur7.size*2}}
-  name Blur6
-  xpos 2407
-  ypos 499
-  cached true
- }
- Dot {
-  name Dot5
-  xpos 2441
-  ypos 964
- }
-push $N15387400
- Blur {
-  size {{Blur8.size*2}}
-  name Blur7
-  xpos 2240
-  ypos 499
- }
- Dot {
-  name Dot6
-  xpos 2274
-  ypos 899
- }
-push $N15387800
- Blur {
-  size {{Blur9.size*2}}
-  name Blur8
-  xpos 2031
-  ypos 499
- }
- Dot {
-  name Dot7
-  xpos 2065
-  ypos 815
- }
-push $N15387c00
- Blur {
-  size {{Blur10.size*2}}
-  name Blur9
-  xpos 1884
-  ypos 499
- }
- Dot {
-  name Dot32
-  xpos 1918
-  ypos 753
- }
-push $N8fe08400
- Blur {
-  size {{Blur11.size*2}}
-  name Blur10
-  xpos 1739
-  ypos 499
- }
- Dot {
-  name Dot33
-  xpos 1773
-  ypos 693
- }
-push $N8fe08800
- Blur {
-  size {{Blur12.size*2}}
-  name Blur11
-  xpos 1594
-  ypos 499
- }
- Dot {
-  name Dot34
-  xpos 1628
-  ypos 624
- }
-push $N8fe08c00
- Blur {
-  size {{Glow1.Size/20 x85 2.1}}
-  name Blur12
-  xpos 1458
-  ypos 499
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge7
-  xpos 1458
-  ypos 621
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge8
-  xpos 1458
-  ypos 690
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge9
-  xpos 1458
-  ypos 750
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge10
-  xpos 1458
-  ypos 812
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge11
-  xpos 1458
-  ypos 896
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge14
-  xpos 1458
-  ypos 961
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge1
-  xpos 1458
-  ypos 1053
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge3
-  xpos 1458
-  ypos 1137
- }
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge4
-  xpos 1458
-  ypos 1196
- }
-push $N8fe0ac00
- Dot {
-  name Dot8
-  xpos 1178
-  ypos -40
- }
- Dot {
-  name Dot35
-  xpos 1178
-  ypos 1302
- }
-set N1ce7cc00 [stack 0]
- Merge2 {
-  inputs 2
-  operation plus
-  name Merge20
-  xpos 1458
-  ypos 1299
- }
-push $N1ce7cc00
- Dot {
-  name Dot36
-  xpos 1178
-  ypos 1482
- }
- Switch {
-  inputs 2
-  which {{parent.Glow1.Enable}}
-  name Switch2
-  xpos 1458
-  ypos 1479
- }
- Input {
-  inputs 0
-  name Input1
-  xpos 401
-  ypos -198
- }
- Merge2 {
-  inputs 2
-  name Merge2
-  xpos 401
-  ypos 1479
- }
-set N815ff400 [stack 0]
- Output {
-  name Output1
-  xpos 401
-  ypos 1900
- }
- NoOp {
-  inputs 0
-  name Glow1
-  xpos 1929
-  ypos 94
-  addUserKnob {20 User}
-  addUserKnob {6 Enable +STARTLINE}
-  Enable true
-  addUserKnob {7 Intensity R 0 10}
-  Intensity {{parent.GlowIntensity}}
-  addUserKnob {7 Size R 0 100}
-  Size {{parent.GlowSpread}}
-  addUserKnob {7 Saturation R 0 2}
-  Saturation 1
-  addUserKnob {18 Colorshift l "Color Shift"}
-  Colorshift {{parent.GlowColor.r} {parent.GlowColor.g} {parent.GlowColor.b}}
-  addUserKnob {6 Colorshift_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
-  addUserKnob {6 Overscan +STARTLINE}
- }
-push $N815ff400
- Viewer {
-  frame 1001
-  frame_range 1001-1264
-  fps 25
-  viewerProcess "sRGB (ACES)"
-  name Viewer1
-  xpos 269
-  ypos -80
- }
-end_group
 Constant {
  inputs 0
  channels rgb
@@ -1881,11 +626,11 @@ Constant {
  ypos -470
 }
 Group {
- name Saber1
+ name Saber
  tile_color 0x3fffff
  selected true
  xpos 1086
- ypos -307
+ ypos -306
  addUserKnob {20 Saber}
  addUserKnob {4 Presets M {Default "Arc Reactor" Burning Cellular Core Electric Energize Energy Fire Firestorm Fog Fractal Fuel Fusion Ghost GhostBuster "Green Energy" "Hard Core" Haze Heat Hot Inferno Kryptonite Meteor Myst "Narrow Bright" Narrow Nebular Neon Patronus Portal Protocol Proton Pulse Replicant "Simple Orange" "Soft Smoke" "Solar Wave" Solar StarKiller Tesseract Thin}}
  addUserKnob {6 EnableGlow l "Enable Glow" +STARTLINE}
@@ -1895,10 +640,10 @@ Group {
  addUserKnob {6 GlowColor_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
  addUserKnob {7 GlowIntensity l "Glow Intensity" R 0 125}
  GlowIntensity 3
- addUserKnob {7 GlowSpread l "Glow Spread"}
- GlowSpread 20
+ addUserKnob {7 GlowSize l "Glow Size"}
+ GlowSize 20
  addUserKnob {7 GlowBias l "Glow Bias" R 0 2.5}
- GlowBias 0.95
+ GlowBias 1.7
  addUserKnob {26 ""}
  addUserKnob {7 CoreSize l "Core Size" R 0 25}
  CoreSize 3
@@ -1971,33 +716,33 @@ Group {
  addUserKnob {6 CoreDistortionBlendOnTop l "Blend on Top" +STARTLINE}
  CoreDistortionBlendOnTop true
  addUserKnob {20 endGroup_2 l endGroup n -1}
- addUserKnob {20 GlowSettings l "Glow Settings"}
- addUserKnob {7 GlowIntensityMultiplier l "Intensity Multiplier" R 0 20}
- GlowIntensityMultiplier 67.64
- addUserKnob {7 GlowSizeMultiplier l "Size Multiplier" R 0 10}
- GlowSizeMultiplier 3.07
- addUserKnob {7 GlowPreGamma l "Pre Gamma" R 0.1 5}
- GlowPreGamma 1
- addUserKnob {26 DIV_Glow1 l "Glow 1"}
- addUserKnob {7 Glow1Intensity l Intensity R 0 10}
- Glow1Intensity 1.5
- addUserKnob {7 Glow1Size l Size R 0 500}
- Glow1Size 60
- addUserKnob {26 DIV_Glow2 l "Glow 2"}
- addUserKnob {7 Glow2Intensity l Intensity R 0 10}
- Glow2Intensity 2.3
- addUserKnob {7 Glow2Size l Size R 0 500}
- Glow2Size 19.9
- addUserKnob {26 DIV_Glow3 l "Glow 3"}
- addUserKnob {7 Glow3Intensity l Intensity R 0 10}
- Glow3Intensity 2.55
- addUserKnob {7 Glow3Size l Size R 0 500}
- Glow3Size 8
- addUserKnob {26 DIV_Glow4 l "Glow 4"}
- addUserKnob {7 Glow4Intensity l Intensity R 0 10}
- Glow4Intensity 2.6
- addUserKnob {7 Glow4Size l Size R 0 500}
- Glow4Size 2.9
+ addUserKnob {20 MistSettings l "Mist Settings"}
+ addUserKnob {7 MistIntensityMultiplier l "Intensity Multiplier" R 0 20}
+ MistIntensityMultiplier 67.64
+ addUserKnob {7 MistSizeMultiplier l "Size Multiplier" R 0 10}
+ MistSizeMultiplier 3.07
+ addUserKnob {7 MistPreGamma l "Pre Gamma" R 0.1 5}
+ MistPreGamma 1
+ addUserKnob {26 DIV_Mist1 l "Mist 1"}
+ addUserKnob {7 Mist1Intensity l Intensity R 0 10}
+ Mist1Intensity 1.5
+ addUserKnob {7 Mist1Size l Size R 0 500}
+ Mist1Size 60
+ addUserKnob {26 DIV_Mist2 l "Mist 2"}
+ addUserKnob {7 Mist2Intensity l Intensity R 0 10}
+ Mist2Intensity 2.3
+ addUserKnob {7 Mist2Size l Size R 0 500}
+ Mist2Size 19.9
+ addUserKnob {26 DIV_Mist3 l "Mist 3"}
+ addUserKnob {7 Mist3Intensity l Intensity R 0 10}
+ Mist3Intensity 2.55
+ addUserKnob {7 Mist3Size l Size R 0 500}
+ Mist3Size 8
+ addUserKnob {26 DIV_Mist4 l "Mist 4"}
+ addUserKnob {7 Mist4Intensity l Intensity R 0 10}
+ Mist4Intensity 2.6
+ addUserKnob {7 Mist4Size l Size R 0 500}
+ Mist4Size 2.9
  addUserKnob {20 RenderSettings l "Render Settings"}
  addUserKnob {20 MotionBlur l "Motion Blur" n 1}
  addUserKnob {6 MotionBlurEnabled l Enabled +STARTLINE}
@@ -2010,8 +755,7 @@ Group {
  addUserKnob {26 DIV_MotionBlur l "" +STARTLINE}
  addUserKnob {7 Gamma R 0.1 10}
  Gamma 1
- addUserKnob {7 Brightness R 0 5}
- Brightness 1
+ addUserKnob {7 Exposure R -2 2}
  addUserKnob {7 Saturation R 0 2}
  Saturation 1.2
  addUserKnob {7 AlphaBoost l "Alpha Boost"}
@@ -2023,22 +767,53 @@ Group {
  addUserKnob {7 M_GlowIntensity}
  M_GlowIntensity 0.12
 }
- Viewer {
+ BackdropNode {
   inputs 0
-  frame 1001
-  frame_range 1001-1264
-  fps 25
-  viewerProcess "sRGB (ACES)"
-  name Viewer1
-  xpos 124
-  ypos -225
+  name BackdropNode1
+  tile_color 0x51a1c6ff
+  label GLOWS
+  note_font_size 64
+  xpos 537
+  ypos -261
+  bdwidth 1921
+  bdheight 1644
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode2
+  tile_color 0xcccc80ff
+  label FIX
+  note_font_size 42
+  xpos 657
+  ypos -771
+  bdwidth 101
+  bdheight 132
+ }
+ NoOp {
+  inputs 0
+  name Glow
+  xpos 1332
+  ypos -47
+  addUserKnob {20 User}
+  addUserKnob {6 Enable +STARTLINE}
+  Enable {{parent.EnableGlow}}
+  addUserKnob {7 Intensity R 0 10}
+  Intensity {{parent.GlowIntensity}}
+  addUserKnob {7 Size R 0 100}
+  Size {{parent.GlowSize}}
+  addUserKnob {7 Saturation R 0 2}
+  Saturation {{parent.Saturation}}
+  addUserKnob {18 Colorshift l "Color Shift"}
+  Colorshift {{parent.GlowColor.r} {parent.GlowColor.g} {parent.GlowColor.b}}
+  addUserKnob {6 Colorshift_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
+  addUserKnob {6 Overscan +STARTLINE}
  }
  Rectangle {
   inputs 0
   area {0 0 {parent.CoreSize} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
   name Rectangle1
   xpos 547
-  ypos -529
+  ypos -848
  }
  Transform {
   translate {{parent.CoreStart.x} {parent.CoreStart.y}}
@@ -2046,20 +821,20 @@ Group {
   center {{parent.CoreSize/2} 0}
   name Transform1
   xpos 547
-  ypos -505
+  ypos -824
  }
-set N59741c00 [stack 0]
+set Nd6483000 [stack 0]
  Dot {
   name Dot9
   xpos 701
-  ypos -502
+  ypos -821
  }
  Erode {
   channels rgb
   size -1.8
   name Erode2
   xpos 667
-  ypos -452
+  ypos -694
  }
  TimeBlur {
   divisions 300
@@ -2068,35 +843,35 @@ set N59741c00 [stack 0]
   shuttercustomoffset 0
   name TimeBlur2
   xpos 667
-  ypos -382
+  ypos -670
+ }
+ Dot {
+  name Dot1
+  xpos 701
+  ypos -557
+ }
+push $Nd6483000
+ Switch {
+  inputs 2
+  which {{parent.MotionBlurEnabled}}
+  name Switch2
+  xpos 547
+  ypos -560
  }
  EXPTool {
   red 0.55
   green 0.55
   blue 0.55
   name Exposure1
-  xpos 667
-  ypos -358
- }
- Dot {
-  name Dot1
-  xpos 701
-  ypos -238
- }
-push $N59741c00
- Switch {
-  inputs 2
-  which {{parent.MotionBlurEnabled}}
-  name Switch2
   xpos 547
-  ypos -241
+  ypos -489
  }
  Dot {
   name Dot58
   xpos 581
   ypos -181
  }
-set Nfdb57800 [stack 0]
+set Nd6481400 [stack 0]
  Dot {
   name Dot24
   xpos 895
@@ -2133,12 +908,6 @@ set Nfdb57800 [stack 0]
   xpos 861
   ypos 173
  }
- Saturation {
-  saturation {{Glow.Saturation}}
-  name Saturation1
-  xpos 861
-  ypos 204
- }
  AdjBBox {
   numpixels {{"Glow.Overscan ? this.width*0.1:0"} {"Glow.Overscan ? this.height*0.1: 0"}}
   name AdjBBox1
@@ -2150,55 +919,55 @@ set Nfdb57800 [stack 0]
   xpos 895
   ypos 270
  }
-set Nfdb55400 [stack 0]
+set N387a2c00 [stack 0]
  Dot {
   name Dot46
   xpos 1031
   ypos 270
  }
-set Nfdb55000 [stack 0]
+set N387a2800 [stack 0]
  Dot {
   name Dot47
   xpos 1176
   ypos 270
  }
-set Nfdb54c00 [stack 0]
+set N387a2400 [stack 0]
  Dot {
   name Dot48
   xpos 1321
   ypos 270
  }
-set Nfdb54800 [stack 0]
+set N387a2000 [stack 0]
  Dot {
   name Dot49
   xpos 1468
   ypos 270
  }
-set Nfdb54400 [stack 0]
+set N387a1c00 [stack 0]
  Dot {
   name Dot50
   xpos 1677
   ypos 270
  }
-set N9062fc00 [stack 0]
+set N387a1800 [stack 0]
  Dot {
   name Dot51
   xpos 1844
   ypos 270
  }
-set N9062f800 [stack 0]
+set N387a1400 [stack 0]
  Dot {
   name Dot60
   xpos 1996
   ypos 270
  }
-set N9062f400 [stack 0]
+set N387a1000 [stack 0]
  Dot {
   name Dot61
   xpos 2205
   ypos 270
  }
-set N9062f000 [stack 0]
+set N387a0c00 [stack 0]
  Dot {
   name Dot62
   xpos 2402
@@ -2216,7 +985,7 @@ set N9062f000 [stack 0]
   xpos 2402
   ypos 1078
  }
-push $N9062f000
+push $N387a0c00
  Blur {
   size {{Blur21.size*2}}
   name Blur20
@@ -2228,7 +997,7 @@ push $N9062f000
   xpos 2205
   ypos 1013
  }
-push $N9062f400
+push $N387a1000
  Blur {
   size {{Blur18.size*2}}
   name Blur21
@@ -2240,7 +1009,7 @@ push $N9062f400
   xpos 1996
   ypos 929
  }
-push $N9062f800
+push $N387a1400
  Blur {
   size {{Blur17.size*2}}
   name Blur18
@@ -2253,7 +1022,7 @@ push $N9062f800
   xpos 1844
   ypos 823
  }
-push $N9062fc00
+push $N387a1800
  Blur {
   size {{Blur16.size*2}}
   name Blur17
@@ -2265,7 +1034,7 @@ push $N9062fc00
   xpos 1677
   ypos 758
  }
-push $Nfdb54400
+push $N387a1c00
  Blur {
   size {{Blur15.size*2}}
   name Blur16
@@ -2277,7 +1046,7 @@ push $Nfdb54400
   xpos 1468
   ypos 674
  }
-push $Nfdb54800
+push $N387a2000
  Blur {
   size {{Blur14.size*2}}
   name Blur15
@@ -2289,7 +1058,7 @@ push $Nfdb54800
   xpos 1321
   ypos 612
  }
-push $Nfdb54c00
+push $N387a2400
  Blur {
   size {{Blur13.size*2}}
   name Blur14
@@ -2301,7 +1070,7 @@ push $Nfdb54c00
   xpos 1176
   ypos 552
  }
-push $Nfdb55000
+push $N387a2800
  Blur {
   size {{Blur2.size*2}}
   name Blur13
@@ -2313,7 +1082,7 @@ push $Nfdb55000
   xpos 1031
   ypos 483
  }
-push $Nfdb55400
+push $N387a2c00
  Blur {
   size {{Glow.Size/20 x85 2.1}}
   name Blur2
@@ -2383,13 +1152,13 @@ push $Nfdb55400
   xpos 861
   ypos 1055
  }
-push $Nfdb57800
+push $Nd6481400
  Dot {
   name Dot59
   xpos 581
   ypos 1161
  }
-set Na0ac7000 [stack 0]
+set N8a90cc00 [stack 0]
  Merge2 {
   inputs 2
   operation screen
@@ -2402,7 +1171,7 @@ set Na0ac7000 [stack 0]
   xpos 895
   ypos 1358
  }
-push $Na0ac7000
+push $N8a90cc00
  Switch {
   inputs 2
   which {{parent.Glow.Enable}}
@@ -2412,52 +1181,51 @@ push $Na0ac7000
  }
  Input {
   inputs 0
-  name Input1
+  name background
   xpos 234
   ypos 1243
  }
  Merge2 {
   inputs 2
+  operation plus
   name Merge1
   xpos 234
   ypos 1355
  }
+ Saturation {
+  saturation {{Glow.Saturation}}
+  name Saturation1
+  xpos 234
+  ypos 1414
+ }
+ Gamma {
+  value {{parent.Gamma}}
+  name Gamma1
+  xpos 234
+  ypos 1467
+ }
+ EXPTool {
+  mode Stops
+  red {{parent.Exposure}}
+  green {{parent.Exposure}}
+  blue {{parent.Exposure}}
+  name Exposure2
+  selected true
+  xpos 234
+  ypos 1532
+ }
  Output {
   name Output1
   xpos 234
-  ypos 1449
- }
- NoOp {
-  inputs 0
-  name Glow
-  selected true
-  xpos 1332
-  ypos -47
-  addUserKnob {20 User}
-  addUserKnob {6 Enable +STARTLINE}
-  Enable {{parent.EnableGlow}}
-  addUserKnob {7 Intensity R 0 10}
-  Intensity {{parent.GlowIntensity}}
-  addUserKnob {7 Size R 0 100}
-  Size {{parent.GlowSpread}}
-  addUserKnob {7 Saturation R 0 2}
-  Saturation 1.5
-  addUserKnob {18 Colorshift l "Color Shift"}
-  Colorshift {{parent.GlowColor.r} {parent.GlowColor.g} {parent.GlowColor.b}}
-  addUserKnob {6 Colorshift_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
-  addUserKnob {6 Overscan +STARTLINE}
+  ypos 1599
  }
 end_group
-set N57e49d00 [stack 0]
-push $N57e49d00
 Viewer {
- inputs 2
- frame 1001
+ frame 1064
  frame_range 1001-1264
- viewerProcess "P3D65 (ACES)"
- translate {-0.2405000031 0.07349999994}
- rotate 77.07556152
+ fps 25
+ viewerProcess "sRGB (ACES)"
  name Viewer1
- xpos -327
- ypos 927
+ xpos 1086
+ ypos -201
 }
