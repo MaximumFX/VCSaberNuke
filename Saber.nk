@@ -1271,7 +1271,29 @@ push $Nfac16000
   area {0 {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2)) * parent.StartOffset/100"} {parent.CoreSize*2} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2)) * parent.EndOffset/100"}}
   name Rectangle1
   xpos 547
-  ypos -848
+  ypos -936
+ }
+ CornerPin2D {
+  to1 {{"-parent.CoreSize * (parent.StartSize-100)/100"} 0}
+  to2 {{"parent.CoreSize * (parent.StartSize)/100 + parent.CoreSize"} 0}
+  to3 {{"parent.CoreSize * (parent.EndSize)/100 + parent.CoreSize"} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
+  to4 {{"-parent.CoreSize * (parent.EndSize-100)/100"} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
+  invert false
+  shutter 0
+  from1 {0 0}
+  from2 {{"parent.CoreSize * 2"} 0}
+  from3 {{"parent.CoreSize * 2"} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
+  from4 {0 {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
+  name CornerPin2D1
+  selected true
+  xpos 547
+  ypos -902
+ }
+ Crop {
+  box {0 0 {parent.CoreSize*2} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2)) * parent.EndOffset/100"}}
+  name Crop1
+  xpos 547
+  ypos -877
  }
  Transform {
   translate {{parent.CoreStart.x} {parent.CoreStart.y}}
