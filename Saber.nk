@@ -1077,6 +1077,30 @@ Group {
  CoreEnd {972 144}
  addUserKnob {26 ""}
  addUserKnob {4 AlphaMode l "Alpha Mode" M {Disable "Mask Core" "Mask Glow" "" "" ""}}
+ addUserKnob {20 CustomizeCore l "Customize Core"}
+ addUserKnob {4 CoreType l "Core Type" M {Saber Mask}}
+ addUserKnob {7 MaskEvolution l "Mask Evolution" R 0 360}
+ addUserKnob {26 Start}
+ addUserKnob {7 StartSize l Size R 0 200}
+ StartSize 100
+ addUserKnob {7 StartOffset l Offset R 0 100}
+ addUserKnob {7 StartRoundness l Roundness R 0 2}
+ StartRoundness 0.5
+ addUserKnob {26 End}
+ addUserKnob {7 EndSize l Size R 0 200}
+ EndSize 100
+ addUserKnob {7 EndOffset l Offset R 0 100}
+ EndOffset 100
+ addUserKnob {7 EndRoundness l Roundness R 0 2}
+ EndRoundness 0.5
+ addUserKnob {26 "" +STARTLINE}
+ addUserKnob {6 OffsetSize l "Offset Size" +STARTLINE}
+ OffsetSize true
+ addUserKnob {7 HaloIntensity l "Halo Intensity" R 0 1000}
+ HaloIntensity 100
+ addUserKnob {7 HaloSize l "Halo Size" R 0 1000}
+ HaloSize 100
+ addUserKnob {7 CoreSoftness l "Core Softness" R 0 25}
  addUserKnob {20 Flicker}
  addUserKnob {7 FlickerIntensity l Intensity R 0 500}
  addUserKnob {7 FlickerSpeed l Speed R 0 30}
