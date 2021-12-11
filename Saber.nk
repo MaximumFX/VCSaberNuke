@@ -11,7 +11,7 @@ define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
             <split size="1745" stretch="1"/>
             <splitter orientation="1">
                 <split size="813"/>
-                <dock id="" activePageId="DAG.1" focus="true">
+                <dock id="" activePageId="DAG.2" focus="true">
                     <page id="DAG.1"/>
                     <page id="DAG.2"/>
                 </dock>
@@ -1244,7 +1244,7 @@ set Nfac16000 [stack 0]
 push $Nfac16000
  Rectangle {
   inputs 0
-  area {0 0 {parent.CoreSize} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
+  area {0 0 {parent.CoreSize*2} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
   name Rectangle1
   xpos 547
   ypos -848
@@ -1252,7 +1252,7 @@ push $Nfac16000
  Transform {
   translate {{parent.CoreStart.x} {parent.CoreStart.y}}
   rotate {{"atan2(parent.CoreEnd.y - parent.CoreStart.y, parent.CoreEnd.x - parent.CoreStart.x) * 180 / pi-90"}}
-  center {{parent.CoreSize/2} 0}
+  center {{parent.CoreSize} 0}
   name Transform1
   xpos 547
   ypos -824
@@ -1621,7 +1621,6 @@ push $Nfb2e3000
 push $Nfafdf000
  Dot {
   name Dot59
-  selected true
   xpos 581
   ypos 1270
  }
@@ -1663,7 +1662,7 @@ push $Nfb2e2400
   saturation {{Glow.Saturation}}
   name Saturation1
   xpos 234
-  ypos 1414
+  ypos 1413
  }
  Gamma {
   value {{parent.Gamma}}
@@ -1691,7 +1690,6 @@ Viewer {
  fps 25
  viewerProcess "sRGB (ACES)"
  name Viewer1
- selected true
  xpos 1086
  ypos -201
 }
