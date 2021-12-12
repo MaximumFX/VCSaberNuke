@@ -1,51 +1,41 @@
-#! C:/Program Files/Nuke13.0v3/nuke-13.0.3.dll -nx
-version 13.0 v3
+#! C:/Program Files/Nuke13.1v1/nuke-13.1.1.dll -nx
+version 13.1 v1
 define_window_layout_xml {<?xml version="1.0" encoding="UTF-8"?>
 <layout version="1.0">
-    <window x="0" y="0" w="1789" h="1048" screen="0">
+    <window x="0" y="0" w="2559" h="1397" screen="0">
         <splitter orientation="1">
             <split size="40"/>
             <dock id="" hideTitles="1" activePageId="Toolbar.1">
                 <page id="Toolbar.1"/>
             </dock>
-            <split size="1745" stretch="1"/>
-            <splitter orientation="1">
-                <split size="813"/>
+            <split size="1896" stretch="1"/>
+            <splitter orientation="2">
+                <split size="795"/>
+                <dock id="" activePageId="Viewer.1">
+                    <page id="Viewer.1"/>
+                </dock>
+                <split size="560"/>
                 <dock id="" activePageId="DAG.1" focus="true">
                     <page id="DAG.1"/>
-                    <page id="DAG.2"/>
+                    <page id="Curve Editor.1"/>
+                    <page id="DopeSheet.1"/>
                 </dock>
-                <split size="928"/>
-                <splitter orientation="2">
-                    <split size="724"/>
-                    <dock id="" activePageId="Viewer.1">
-                        <page id="Viewer.1"/>
-                    </dock>
-                    <split size="282"/>
-                    <splitter orientation="1">
-                        <split size="462"/>
-                        <dock id="" activePageId="DopeSheet.1">
-                            <page id="uk.co.thefoundry.histogram.1"/>
-                            <page id="Curve Editor.1"/>
-                            <page id="DopeSheet.1"/>
-                        </dock>
-                        <split size="462"/>
-                        <dock id="" activePageId="uk.co.thefoundry.waveformscope.1">
-                            <page id="uk.co.thefoundry.waveformscope.1"/>
-                        </dock>
-                    </splitter>
-                </splitter>
             </splitter>
+            <split size="615"/>
+            <dock id="" activePageId="Properties.1">
+                <page id="Properties.1"/>
+                <page id="uk.co.thefoundry.backgroundrenderview.1"/>
+            </dock>
         </splitter>
     </window>
 </layout>
 }
 Root {
  inputs 0
- name C:/Users/Max.deGroot/IdeaProjects/VCSaberNuke/Saber.nk
+ name C:/Users/Wouter/Documents/GitHub/VCSaberNuke/Saber.nk
  frame 1001
  first_frame 1001
- last_frame 1264
+ last_frame 1200
  lock_range true
  format "1920 1080 0 0 1920 1080 1 HD_1080"
  proxy_type scale
@@ -60,6 +50,18 @@ Root {
  int16Lut texture_paint
  logLut compositing_log
  floatLut scene_linear
+}
+BackdropNode {
+ inputs 0
+ name BackdropNode2
+ tile_color 0x8e8e8eff
+ label "Displacement Test"
+ note_font_size 72
+ xpos -450
+ ypos -708
+ bdwidth 1146
+ bdheight 1716
+ z_order -1
 }
 BackdropNode {
  inputs 0
@@ -80,8 +82,8 @@ BackdropNode {
  note_font_size 42
  xpos -63
  ypos 56
- bdwidth 517
- bdheight 402
+ bdwidth 683
+ bdheight 400
 }
 BackdropNode {
  inputs 0
@@ -89,7 +91,7 @@ BackdropNode {
  tile_color 0xff5b5bff
  label "https://benmcewan.com/blog/2019/10/21/back-to-basics-common-errors-when-creating-a-gizmo/\n"
  note_font_size 42
- xpos -296
+ xpos -466
  ypos -1079
  bdwidth 1692
  bdheight 80
@@ -231,7 +233,7 @@ Dot {
  xpos -16
  ypos -193
 }
-set Nc3423400 [stack 0]
+set N32468800 [stack 0]
 Glow_Exponential {
  name Glow_Exponential1
  xpos 136
@@ -246,15 +248,15 @@ Glow_Exponential {
 Dot {
  name Dot4
  xpos 170
- ypos -121
+ ypos -111
 }
-push $Nc3423400
+push $N32468800
 Dot {
  name Dot1
  xpos -16
  ypos -175
 }
-set Nfa6d6800 [stack 0]
+set N1a9c7800 [stack 0]
 Glow_Exponential {
  name Glow_Exponential
  xpos 26
@@ -271,7 +273,7 @@ Dot {
  xpos 60
  ypos -145
 }
-push $Nfa6d6800
+push $N1a9c7800
 Merge2 {
  inputs 2
  operation plus
@@ -286,7 +288,7 @@ Merge2 {
  bbox B
  name Merge2
  xpos -50
- ypos -124
+ ypos -114
 }
 ColorCorrect {
  master 0
@@ -297,7 +299,7 @@ ColorCorrect {
    highlight {curve x0.4099999964 0 s0 x1 1 s0}}
  name ColorCorrect1
  xpos -50
- ypos -100
+ ypos -84
 }
 EXPTool {
  mode Stops
@@ -306,12 +308,7 @@ EXPTool {
  blue 1.55
  name Exposure1
  xpos -50
- ypos -76
-}
-Dot {
- name Dot5
- xpos -16
- ypos -40
+ ypos -48
 }
 Saturation {
  saturation 0
@@ -319,7 +316,7 @@ Saturation {
  xpos -50
  ypos 3
 }
-set Nfa8f8800 [stack 0]
+set N1a7f5c00 [stack 0]
 Dot {
  name Dot20
  xpos -126
@@ -328,16 +325,16 @@ Dot {
 Dot {
  name Dot19
  xpos -126
- ypos 514
+ ypos 535
 }
-set Nfa88bc00 [stack 0]
+set N1a7f5400 [stack 0]
 Dot {
  name Dot21
  xpos -126
- ypos 654
+ ypos 675
 }
-push $Nfa88bc00
-push $Nfa8f8800
+push $N1a7f5400
+push $N1a7f5c00
 Saturation {
  saturation 0
  name Saturation1
@@ -359,85 +356,85 @@ Noise {
  gain 1.75
  center {960 540}
  name Noise1
- xpos 251
- ypos 127
+ xpos 302
+ ypos 100
 }
 Dot {
  name Dot6
- xpos 285
+ xpos 336
  ypos 151
 }
-set Nfa88a800 [stack 0]
+set N1a793c00 [stack 0]
 Grade {
  add 1
  black_clamp false
  white_clamp true
  name Grade2
- xpos 358
- ypos 257
+ xpos 446
+ ypos 148
 }
 Invert {
  name Invert3
- xpos 358
+ xpos 446
  ypos 281
 }
 Grade {
  whitepoint 0.68
  name Grade4
- xpos 358
+ xpos 446
  ypos 313
 }
 Dot {
  name Dot9
- xpos 392
+ xpos 480
  ypos 386
 }
-push $Nfa88a800
+push $N1a793c00
 Clamp {
  name Clamp1
  xpos 60
- ypos 254
+ ypos 142
 }
 Dot {
  name Dot7
  xpos 94
  ypos 286
 }
-set Nfa889000 [stack 0]
+set N1a792400 [stack 0]
 Clamp {
  minimum 1
  maximum 0
  name Clamp3
- xpos 141
- ypos 279
+ xpos 126
+ ypos 277
 }
 Invert {
  name Invert2
- xpos 141
- ypos 311
+ xpos 214
+ ypos 277
 }
-push $Nfa88a800
+push $N1a793c00
 Clamp {
  minimum 1
  maximum 5
  MinClampTo_enable true
  MaxClampTo_enable true
  name Clamp2
- xpos 251
- ypos 209
+ xpos 302
+ ypos 169
 }
 Grade {
  blackpoint -2.7
  add -1
  black_clamp false
  name Grade1
- xpos 251
- ypos 252
+ xpos 302
+ ypos 205
 }
 Invert {
  name Invert1
- xpos 251
- ypos 283
+ xpos 302
+ ypos 229
 }
 Shuffle2 {
  inputs 2
@@ -446,21 +443,21 @@ Shuffle2 {
  in2 rgba
  mappings "4 rgba.red 0 0 rgba.red 0 0 rgba.green 0 1 rgba.green 0 1 rgba.blue 0 2 rgba.blue 0 2 rgba.red 1 0 rgba.alpha 0 3"
  name Shuffle1
- xpos 251
- ypos 315
+ xpos 302
+ ypos 283
 }
 Grade {
  whitepoint 0.9997
  name Grade3
- xpos 251
- ypos 339
+ xpos 302
+ ypos 322
 }
 Premult {
  name Premult1
- xpos 251
+ xpos 302
  ypos 359
 }
-push $Nfa889000
+push $N1a792400
 Merge2 {
  inputs 2
  name Merge4
@@ -494,7 +491,7 @@ Group {
  help "by Daniel van der Kaaden\nversion 2.2"
  tile_color 0x9f6fb3ff
  xpos 60
- ypos 466
+ ypos 487
  addUserKnob {20 User}
  addUserKnob {41 amount T IDistort1.uv_scale}
  addUserKnob {41 size T Noise1.size}
@@ -558,7 +555,7 @@ Group {
   xpos -224
   ypos -100
  }
-set Nfabcfc00 [stack 0]
+set N1b711400 [stack 0]
  Shuffle {
   red black
   green red
@@ -577,7 +574,7 @@ set Nfabcfc00 [stack 0]
   xpos -4
   ypos -22
  }
-push $Nfabcfc00
+push $N1b711400
  Merge2 {
   inputs 2
   operation plus
@@ -587,8 +584,10 @@ push $Nfabcfc00
  }
  Blur {
   name Blur1
+  selected true
   xpos -258
  }
+set N1b6b3c00 [stack 0]
  Multiply {
   inputs 1+1
   value 0
@@ -641,20 +640,28 @@ push $Nfabcfc00
   xpos -447
   ypos 633
  }
+push $N1b6b3c00
+ Viewer {
+  frame_range 1001-1200
+  viewerProcess "sRGB (ACES)"
+  name Viewer1
+  xpos -447
+  ypos 324
+ }
 end_group
 Merge2 {
  inputs 2
  operation screen
  name Merge12
  xpos 60
- ypos 511
+ ypos 532
 }
 Group {
  name TurbulentDisplace2
  help "by Daniel van der Kaaden\nversion 2.2"
  tile_color 0x9f6fb3ff
  xpos 60
- ypos 563
+ ypos 584
  addUserKnob {20 User}
  addUserKnob {41 amount T IDistort1.uv_scale}
  addUserKnob {41 size T Noise1.size}
@@ -718,7 +725,7 @@ Group {
   xpos -224
   ypos -100
  }
-set Nfab62400 [stack 0]
+set N1b62f800 [stack 0]
  Shuffle {
   red black
   green red
@@ -737,7 +744,7 @@ set Nfab62400 [stack 0]
   xpos -4
   ypos -22
  }
-push $Nfab62400
+push $N1b62f800
  Merge2 {
   inputs 2
   operation plus
@@ -758,7 +765,7 @@ push $Nfab62400
   ypos 125
   disable {{"\[exists parent.input1.name]==0"}}
  }
-set Nfab60c00 [stack 0]
+set N1b62e000 [stack 0]
  Dot {
   name Dot1
   xpos -224
@@ -803,7 +810,7 @@ set Nfab60c00 [stack 0]
   xpos -447
   ypos 633
  }
-push $Nfab60c00
+push $N1b62e000
  Viewer {
   frame_range 1-100
   fps 25
@@ -819,14 +826,14 @@ EXPTool {
  blue -0.9999999977
  name Exposure4
  xpos 60
- ypos 610
+ ypos 631
 }
 Merge2 {
  inputs 2
  operation screen
  name Merge13
  xpos 60
- ypos 651
+ ypos 672
 }
 EXPTool {
  mode Stops
@@ -835,21 +842,21 @@ EXPTool {
  blue 0.15
  name Exposure5
  xpos 60
- ypos 696
+ ypos 717
 }
 Grade {
  add -0.008
  gamma 0.89
  name Grade5
  xpos 60
- ypos 720
+ ypos 752
 }
 Group {
  name TurbulentDisplace3
  help "by Daniel van der Kaaden\nversion 2.2"
  tile_color 0x9f6fb3ff
  xpos 60
- ypos 768
+ ypos 800
  addUserKnob {20 User}
  addUserKnob {41 amount T IDistort1.uv_scale}
  addUserKnob {41 size T Noise1.size}
@@ -914,7 +921,7 @@ Group {
   xpos -224
   ypos -100
  }
-set Nfae6fc00 [stack 0]
+set N1b5c5400 [stack 0]
  Shuffle {
   red black
   green red
@@ -933,7 +940,7 @@ set Nfae6fc00 [stack 0]
   xpos -4
   ypos -22
  }
-push $Nfae6fc00
+push $N1b5c5400
  Merge2 {
   inputs 2
   operation plus
@@ -954,7 +961,7 @@ push $Nfae6fc00
   ypos 125
   disable {{"\[exists parent.input1.name]==0"}}
  }
-set Nfae6e400 [stack 0]
+set N1b55b800 [stack 0]
  Dot {
   name Dot1
   xpos -224
@@ -999,7 +1006,7 @@ set Nfae6e400 [stack 0]
   xpos -447
   ypos 633
  }
-push $Nfae6e400
+push $N1b55b800
  Viewer {
   frame_range 1-100
   fps 25
@@ -1018,12 +1025,12 @@ ColorCorrect {
    highlight {}}
  name ColorCorrect2
  xpos 60
- ypos 814
+ ypos 846
 }
 Glow_Exponential {
  name Glow_Exponential6
  xpos 60
- ypos 838
+ ypos 915
  size 3.5
  intensity 0.45
  range {0.371474791 4 4 4}
@@ -1034,27 +1041,42 @@ CheckerBoard2 {
  centerlinewidth 0
  name CheckerBoard1
  xpos -335
- ypos 756
+ ypos 728
+}
+Grade {
+ white 0.16
+ gamma 1.24
+ name Grade6
+ xpos -335
+ ypos 800
+}
+Blur {
+ size 6.8
+ name Blur2
+ xpos -335
+ ypos 824
 }
 Merge2 {
  inputs 2
+ operation plus
+ bbox B
  name Merge3
  xpos -335
- ypos 838
+ ypos 915
 }
 Constant {
  inputs 0
  channels rgb
  format "1920 1080 0 0 1920 1080 1 HD_1080"
  name Constant5
- xpos 1086
- ypos -470
+ xpos 1412
+ ypos -333
 }
 Group {
  name Saber
  tile_color 0x3fffff
- xpos 1086
- ypos -306
+ xpos 1412
+ ypos -169
  addUserKnob {20 Saber}
  addUserKnob {4 Presets M {Default "Arc Reactor" Burning Cellular Core Electric Energize Energy Fire Firestorm Fog Fractal Fuel Fusion Ghost GhostBuster "Green Energy" "Hard Core" Haze Heat Hot Inferno Kryptonite Meteor Myst "Narrow Bright" Narrow Nebular Neon Patronus Portal Protocol Proton Pulse Replicant "Simple Orange" "Soft Smoke" "Solar Wave" Solar StarKiller Tesseract Thin}}
  addUserKnob {6 EnableGlow l "Enable Glow" +STARTLINE}
@@ -1062,19 +1084,19 @@ Group {
  addUserKnob {18 GlowColor l "Glow Color"}
  GlowColor {0 0.498 1}
  addUserKnob {6 GlowColor_panelDropped l "panel dropped state" -STARTLINE +HIDDEN}
- addUserKnob {7 GlowIntensity l "Glow Intensity" R 0 125}
+ addUserKnob {7 GlowIntensity l "Glow Intensity" R 0 10}
  GlowIntensity 3
- addUserKnob {7 GlowSize l "Glow Size"}
+ addUserKnob {7 GlowSize l "Glow Size" R 0 100}
  GlowSize 20
  addUserKnob {7 GlowBias l "Glow Bias" R 0 2.5}
- GlowBias 1.7
+ GlowBias 2.5
  addUserKnob {26 ""}
- addUserKnob {7 CoreSize l "Core Size" R 0 25}
- CoreSize 3
+ addUserKnob {7 CoreSize l "Core Size" R 0 20}
+ CoreSize 8
  addUserKnob {12 CoreStart l "Core Start"}
- CoreStart {{curve x1001 906 x1016 1468} {curve x1001 776 x1016 708}}
+ CoreStart {972 155}
  addUserKnob {12 CoreEnd l "Core End"}
- CoreEnd {972 144}
+ CoreEnd {972 855}
  addUserKnob {26 ""}
  addUserKnob {4 AlphaMode l "Alpha Mode" M {Disable "Mask Core" "Mask Glow" "" "" ""}}
  addUserKnob {20 CustomizeCore l "Customize Core"}
@@ -1093,7 +1115,7 @@ Group {
  EndOffset 100
  addUserKnob {7 EndRoundness l Roundness R 0 2}
  EndRoundness 0.5
- addUserKnob {26 "" +STARTLINE}
+ addUserKnob {26 ""}
  addUserKnob {6 OffsetSize l "Offset Size" +STARTLINE}
  OffsetSize true
  addUserKnob {7 HaloIntensity l "Halo Intensity" R 0 1000}
@@ -1110,7 +1132,6 @@ Group {
  FlickerRandomSeed 5000
  addUserKnob {20 Distortion}
  addUserKnob {20 GlowDistortion l "Glow Distortion" n 1}
- GlowDistortion 0
  addUserKnob {7 GlowDistortionAmount l Amount R 0 200}
  addUserKnob {4 GlowDistortionType l Type M {Smoke Fluid Energy}}
  GlowDistortionType Energy
@@ -1202,14 +1223,13 @@ Group {
  addUserKnob {7 MotionBlurClamp l Clamp R 0 20}
  addUserKnob {20 endGroup n -1}
  addUserKnob {26 DIV_MotionBlur l "" +STARTLINE}
- addUserKnob {7 Gamma R 0.1 10}
+ addUserKnob {7 Gamma R 0.1 2}
  Gamma 1
  addUserKnob {7 Exposure R -2 2}
  addUserKnob {7 Saturation R 0 2}
- Saturation 1.2
+ Saturation 1
  addUserKnob {7 AlphaBoost l "Alpha Boost"}
- addUserKnob {4 CompositeSettings l "Composite Settings" M {Transparent Black Add}}
- CompositeSettings Add
+ addUserKnob {4 CompositeSettings l "Composite Settings" M {"Effect only" Add "" ""}}
  addUserKnob {20 Multipliers}
  addUserKnob {7 M_GlowSize}
  M_GlowSize 1
@@ -1238,6 +1258,28 @@ Group {
   bdwidth 101
   bdheight 132
  }
+ BackdropNode {
+  inputs 0
+  name BackdropNode3
+  tile_color 0x518e4eff
+  label "Line Generation"
+  note_font_size 42
+  xpos 414
+  ypos -1164
+  bdwidth 330
+  bdheight 273
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode4
+  tile_color 0x8e8e3800
+  label "Render Settings"
+  note_font_size 42
+  xpos 111
+  ypos 1523
+  bdwidth 345
+  bdheight 284
+ }
  NoOp {
   inputs 0
   name Glow
@@ -1260,18 +1302,18 @@ Group {
  Input {
   inputs 0
   name mask
-  xpos 243
-  ypos -191
+  xpos 335
+  ypos 1134
   number 1
  }
-set Nfac16000 [stack 0]
-push $Nfac16000
+set N1b2fa400 [stack 0]
+push $N1b2fa400
  Rectangle {
   inputs 0
   area {0 {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2)) * parent.StartOffset/100"} {parent.CoreSize*2} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2)) * parent.EndOffset/100"}}
   name Rectangle1
   xpos 547
-  ypos -936
+  ypos -1084
  }
  CornerPin2D {
   to1 {{"-parent.CoreSize * (parent.StartSize-100)/100"} 0}
@@ -1285,15 +1327,14 @@ push $Nfac16000
   from3 {{"parent.CoreSize * 2"} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
   from4 {0 {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2))"}}
   name CornerPin2D1
-  selected true
   xpos 547
-  ypos -902
+  ypos -1050
  }
  Crop {
   box {0 0 {parent.CoreSize*2} {"sqrt(pow(parent.CoreEnd.x - parent.CoreStart.x, 2) + pow(parent.CoreEnd.y - parent.CoreStart.y, 2)) * parent.EndOffset/100"}}
   name Crop1
   xpos 547
-  ypos -877
+  ypos -1009
  }
  Transform {
   translate {{parent.CoreStart.x} {parent.CoreStart.y}}
@@ -1301,9 +1342,14 @@ push $Nfac16000
   center {{parent.CoreSize} 0}
   name Transform1
   xpos 547
-  ypos -824
+  ypos -972
  }
-set Nfac15800 [stack 0]
+ Dot {
+  name Dot6
+  xpos 581
+  ypos -821
+ }
+set N1b2f8c00 [stack 0]
  Dot {
   name Dot9
   xpos 701
@@ -1330,7 +1376,7 @@ set Nfac15800 [stack 0]
   xpos 701
   ypos -557
  }
-push $Nfac15800
+push $N1b2f8c00
  Switch {
   inputs 2
   which {{parent.MotionBlurEnabled}}
@@ -1346,15 +1392,20 @@ push $Nfac15800
   xpos 547
   ypos -487
  }
-set Nfafdfc00 [stack 0]
+set N1b297000 [stack 0]
+ Dot {
+  name Dot3
+  xpos 369
+  ypos -484
+ }
  Merge2 {
   inputs 2
   operation mask
   name Merge3
-  xpos 442
-  ypos -387
+  xpos 335
+  ypos -335
  }
-push $Nfafdfc00
+push $N1b297000
  Switch {
   inputs 2
   which {{"parent.AlphaMode == 1"}}
@@ -1367,7 +1418,7 @@ push $Nfafdfc00
   xpos 581
   ypos -181
  }
-set Nfafdf000 [stack 0]
+set N1b296000 [stack 0]
  Dot {
   name Dot24
   xpos 895
@@ -1415,55 +1466,55 @@ set Nfafdf000 [stack 0]
   xpos 895
   ypos 270
  }
-set Nfafdd000 [stack 0]
+set N1b24bc00 [stack 0]
  Dot {
   name Dot46
   xpos 1031
   ypos 270
  }
-set Nfafdcc00 [stack 0]
+set N1b24b800 [stack 0]
  Dot {
   name Dot47
   xpos 1176
   ypos 270
  }
-set Nfafdc800 [stack 0]
+set N1b24b400 [stack 0]
  Dot {
   name Dot48
   xpos 1321
   ypos 270
  }
-set Nfafdc400 [stack 0]
+set N1b24b000 [stack 0]
  Dot {
   name Dot49
   xpos 1468
   ypos 270
  }
-set Nfaf8fc00 [stack 0]
+set N1b24ac00 [stack 0]
  Dot {
   name Dot50
   xpos 1677
   ypos 270
  }
-set Nfaf8f800 [stack 0]
+set N1b24a800 [stack 0]
  Dot {
   name Dot51
   xpos 1844
   ypos 270
  }
-set Nfaf8f400 [stack 0]
+set N1b24a400 [stack 0]
  Dot {
   name Dot60
   xpos 1996
   ypos 270
  }
-set Nfaf8f000 [stack 0]
+set N1b24a000 [stack 0]
  Dot {
   name Dot61
   xpos 2205
   ypos 270
  }
-set Nfaf8ec00 [stack 0]
+set N1b249c00 [stack 0]
  Dot {
   name Dot62
   xpos 2402
@@ -1481,7 +1532,7 @@ set Nfaf8ec00 [stack 0]
   xpos 2402
   ypos 1078
  }
-push $Nfaf8ec00
+push $N1b249c00
  Blur {
   size {{Blur21.size*2}}
   name Blur20
@@ -1493,7 +1544,7 @@ push $Nfaf8ec00
   xpos 2205
   ypos 1013
  }
-push $Nfaf8f000
+push $N1b24a000
  Blur {
   size {{Blur18.size*2}}
   name Blur21
@@ -1505,7 +1556,7 @@ push $Nfaf8f000
   xpos 1996
   ypos 929
  }
-push $Nfaf8f400
+push $N1b24a400
  Blur {
   size {{Blur17.size*2}}
   name Blur18
@@ -1518,7 +1569,7 @@ push $Nfaf8f400
   xpos 1844
   ypos 823
  }
-push $Nfaf8f800
+push $N1b24a800
  Blur {
   size {{Blur16.size*2}}
   name Blur17
@@ -1530,7 +1581,7 @@ push $Nfaf8f800
   xpos 1677
   ypos 758
  }
-push $Nfaf8fc00
+push $N1b24ac00
  Blur {
   size {{Blur15.size*2}}
   name Blur16
@@ -1542,7 +1593,7 @@ push $Nfaf8fc00
   xpos 1468
   ypos 674
  }
-push $Nfafdc400
+push $N1b24b000
  Blur {
   size {{Blur14.size*2}}
   name Blur15
@@ -1554,7 +1605,7 @@ push $Nfafdc400
   xpos 1321
   ypos 612
  }
-push $Nfafdc800
+push $N1b24b400
  Blur {
   size {{Blur13.size*2}}
   name Blur14
@@ -1566,7 +1617,7 @@ push $Nfafdc800
   xpos 1176
   ypos 552
  }
-push $Nfafdcc00
+push $N1b24b800
  Blur {
   size {{Blur2.size*2}}
   name Blur13
@@ -1578,7 +1629,7 @@ push $Nfafdcc00
   xpos 1031
   ypos 483
  }
-push $Nfafdd000
+push $N1b24bc00
  Blur {
   size {{Glow.Size/20 x85 2.1}}
   name Blur2
@@ -1648,15 +1699,25 @@ push $Nfafdd000
   xpos 861
   ypos 1055
  }
-set Nfb2e3000 [stack 0]
+set N1b1ae000 [stack 0]
+ Dot {
+  name Dot5
+  xpos 739
+  ypos 1058
+ }
  Merge2 {
   inputs 2
   operation mask
   name Merge2
-  xpos 756
-  ypos 1148
+  xpos 705
+  ypos 1134
  }
-push $Nfb2e3000
+ Dot {
+  name Dot4
+  xpos 739
+  ypos 1203
+ }
+push $N1b1ae000
  Switch {
   inputs 2
   which {{"parent.AlphaMode == 2"}}
@@ -1664,13 +1725,13 @@ push $Nfb2e3000
   xpos 861
   ypos 1200
  }
-push $Nfafdf000
+push $N1b296000
  Dot {
   name Dot59
   xpos 581
   ypos 1270
  }
-set Nfb2e2400 [stack 0]
+set N1b1acc00 [stack 0]
  Merge2 {
   inputs 2
   operation screen
@@ -1683,7 +1744,7 @@ set Nfb2e2400 [stack 0]
   xpos 895
   ypos 1358
  }
-push $Nfb2e2400
+push $N1b1acc00
  Switch {
   inputs 2
   which {{parent.Glow.Enable}}
@@ -1708,13 +1769,13 @@ push $Nfb2e2400
   saturation {{Glow.Saturation}}
   name Saturation1
   xpos 234
-  ypos 1413
+  ypos 1617
  }
  Gamma {
   value {{parent.Gamma}}
   name Gamma1
   xpos 234
-  ypos 1467
+  ypos 1673
  }
  EXPTool {
   mode Stops
@@ -1723,19 +1784,18 @@ push $Nfb2e2400
   blue {{parent.Exposure}}
   name Exposure2
   xpos 234
-  ypos 1532
+  ypos 1748
  }
  Output {
   name Output1
   xpos 234
-  ypos 1599
+  ypos 1844
  }
 end_group
 Viewer {
- frame_range 1001-1264
- fps 25
+ frame_range 1001-1200
  viewerProcess "sRGB (ACES)"
  name Viewer1
- xpos 1086
- ypos -201
+ xpos 1412
+ ypos -145
 }
